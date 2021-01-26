@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: libretranslate
+  namespace: libretranslate
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: libretranslate
+  template:
+    metadata:
+      labels:
+        app: libretranslate
+    spec:
+      containers:
+        - name: libretranslate
+          image: bujarbakiu/libretranslate:0.1
+          resources:
+            limits:
+              memory: "4Gi"
+              cpu: "2"
+          ports:
+            - containerPort: 5000

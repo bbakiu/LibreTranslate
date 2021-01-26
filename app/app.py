@@ -13,7 +13,7 @@ def get_remote_address():
 
     return ip
 
-def create_app(char_limit=-1, req_limit=-1, batch_limit=-1, ga_id=None, debug=False, frontend_language_source="en", frontend_language_target="en"):
+def create_app(char_limit=-1, req_limit=-1, batch_limit=-1, ga_id=None, debug=False, frontend_language_source="en", frontend_language_target="es"):
     from app.init import boot
     boot()
 
