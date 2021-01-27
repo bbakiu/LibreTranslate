@@ -4,7 +4,7 @@ metadata:
   name: libretranslate
   namespace: libretranslate
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: libretranslate
@@ -15,10 +15,10 @@ spec:
     spec:
       containers:
         - name: libretranslate
-          image: bujarbakiu/libretranslate:0.1
+          image: 081827876616.dkr.ecr.us-west-2.amazonaws.com/libretranslate
           resources:
             limits:
-              memory: "4Gi"
-              cpu: "2"
+              memory: "3Gi"
+              cpu: "1"
           ports:
             - containerPort: 5000
